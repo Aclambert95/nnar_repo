@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Nonsense Animal Rescue</title>
+    <link rel="icon" type="image/png" href="assets/images/nnar_logo_icon.png">
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <script src="assets/navManager.js"></script>
+</head>
+
+<body class="main-body">
+
+    <header>
+        <h1 class="header">No Nonsense Animal Rescue </h1>
+    </header>
+
+    <special-nav></special-nav>
+
+    <form class="adoption-form" id="adoption-form">
+        <h2>NNAR Adoption Application</h2>
+
+        <fieldset class="set1">
+            <h2>Applicant Information</h2>
+            <label for="full-legal-name">Full Legal Name</label>
+            <input type="text" id="full-legal-name" name="Full Legal Name" required><br>
+
+            <label for="date-of-birth">Date of Birth</label>
+            <input type="date" id="date-of-birth" name="Date of Birth" required><br>
+
+            <label for="phone-number">Phone</label>
+            <input type="text" id="phone-number" name="Phone Number" inputmode="numeric" autocomplete="tel"
+                maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-phone-format="true" required><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required><br>
+
+            <label for="home-address">Home Address</label>
+            <input type="text" id="home-address" name="Home Address" required><br>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="City" required><br>
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="State" required><br>
+
+            <label for="zip">ZIP</label>
+            <input type="text" id="zip" name="ZIP" required><br>
+
+            <label for="drivers-license">Driver's License Number and State</label>
+            <input type="text" id="drivers-license" name="Driver's License Number and State" required><br>
+
+            <label for="animal-interest">Animal you are interested in adopting</label>
+            <input type="text" id="animal-interest" name="Animal you are interested in adopting" required><br>
+        </fieldset>
+
+        <fieldset class="set2">
+            <h2>Household Information</h2>
+            <label for="adult-names">Names of Adults in home</label>
+            <input type="text" id="adult-names" name="Names of Adults in home" required><br>
+
+            <label for="children-in-home">Children in home</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Children in home" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Children in home" value="No"> No</label>
+            </div>
+
+            <label for="children-ages">Ages of children</label>
+            <input type="text" id="children-ages" name="Ages of children"><br>
+
+            <label>Everyone in household agrees to adoption</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Household agrees to adoption" value="Everyone agrees"> Everyone agrees</label>
+                <label class="checkbox-item"><input type="radio" name="Household agrees to adoption" value="Not everyone agrees"> Not everyone agrees</label>
+            </div>
+
+            <label for="allergies">Allergies or other animal-related concerns</label>
+            <input type="text" id="allergies" name="Allergies or other animal-related concerns"><br>
+
+            <label for="primary-responsible">Primary person responsible for animal</label>
+            <input type="text" id="primary-responsible" name="Primary person responsible for animal" required><br>
+        </fieldset>
+
+        <fieldset class="set3">
+            <h2>Home & Property</h2>
+
+            <label>Type of Home</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Type of Home" value="House"> House</label>
+                <label class="checkbox-item"><input type="radio" name="Type of Home" value="Apartment"> Apartment</label>
+                <label class="checkbox-item"><input type="radio" name="Type of Home" value="Condo/Townhome"> Condo/Townhome</label>
+                <label class="checkbox-item"><input type="radio" name="Type of Home" value="Mobile home"> Mobile home</label>
+                <label class="checkbox-item"><input type="radio" name="Type of Home" value="Other"> Other</label>
+            </div>
+
+            <label>Do you own or rent your home?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Own or Rent" value="Own"> Own</label>
+                <label class="checkbox-item"><input type="radio" name="Own or Rent" value="Rent"> Rent</label>
+                <label class="checkbox-item"><input type="radio" name="Own or Rent" value="Live with family/other arrangement"> Live with family/other arrangement</label>
+            </div>
+
+            <label for="landlord-manager">If renting - Landlord/Property Manager</label>
+            <input type="text" id="landlord-manager" name="If renting - Landlord/Property Manager"><br>
+
+            <label for="landlord-phone">Phone</label>
+            <input type="text" id="landlord-phone" name="Landlord Phone" inputmode="numeric" autocomplete="tel"
+                maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-phone-format="true"><br>
+
+            <label>Pets permitted</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Pets permitted" value="Pets permitted"> Pets permitted</label>
+                <label class="checkbox-item"><input type="radio" name="Pets permitted" value="Pets not permitted"> Pets not permitted</label>
+                <label class="checkbox-item"><input type="radio" name="Pets permitted" value="Not applicable"> Not applicable</label>
+            </div>
+
+            <label for="pet-restrictions">Breed/species/size/number restrictions</label>
+            <input type="text" id="pet-restrictions" name="Breed/species/size/number restrictions"><br>
+
+            <label>Fenced yard</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Fenced yard" value="Fully fenced yard"> Fully fenced yard</label>
+                <label class="checkbox-item"><input type="radio" name="Fenced yard" value="Partially fenced"> Partially fenced</label>
+                <label class="checkbox-item"><input type="radio" name="Fenced yard" value="No fence"> No fence</label>
+                <label class="checkbox-item"><input type="radio" name="Fenced yard" value="Not applicable"> Not applicable</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="set4">
+            <div class="fieldset-header">
+                <h2>Current Animals</h2>
+            </div><br>
+
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Current pets" value="I currently have pets"> I currently have pets</label>
+                <label class="checkbox-item"><input type="radio" name="Current pets" value="No current pets"> No current pets</label>
+            </div><br>
+
+            <div id="pet-rows">
+                <div class="pet-row">
+                    <label for="pet-one-name">Pet Name, Age, Breed, and Sex</label>
+                    <textarea id="pet-one-name" name="Pet Name, Age, Breed, and Sex" rows="2"></textarea><br>
+
+                    <div class="inline-checkbox-row">
+                        <label class="inline-checkbox-item" for="vaccine-status">
+                            <input type="checkbox" id="vaccine-status" name="Vaccine Status" value="Yes">
+                            <span>Fully Vaccinated?</span>
+                        </label>
+                        <label class="inline-checkbox-item" for="spay-neuter">
+                            <input type="checkbox" id="spay-neuter" name="Spay/Neuter Status" value="Yes">
+                            <span>Spayed/Neutered?</span>
+                        </label>
+                    </div><br>
+
+                    <label for="additional-notes">Additional Notes as to why ALL pets are not Vaccinated or Spayed/Neutered</label>
+                    <textarea id="additional-notes" name="Additional Notes" rows="3"></textarea>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="set5">
+            <h2>Additional Information</h2>
+
+            <label for="vet-name">Veterinarian Name</label>
+            <input type="text" id="vet-name" name="Veterinarian Name"><br>
+
+            <label for="vet-phone">Veterinarian Phone</label>
+            <input type="text" id="vet-phone" name="Veterinarian Phone" inputmode="numeric" autocomplete="tel"
+                maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-phone-format="true"><br>
+
+            <label for="references">One Personal Reference</label>
+            <input type="text" id="references" name="References" required><br>
+
+            <label for="adoption-reason">Why do you want to adopt this animal?</label>
+            <input type="text" id="adoption-reason" name="Why do you want to adopt this animal?" required><br>
+
+            <label for="special-needs">Any special needs or concerns we should know about?</label>
+            <input type="text" id="special-needs" name="Any special needs or concerns we should know about?"><br>
+        </fieldset>
+
+        <fieldset class="set6">
+            <h2>Adoption Agreement</h2>
+
+            <label>I understand the adoption process and fees</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Adoption agreement" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Adoption agreement" value="No"> No</label>
+            </div>
+
+            <label for="signature">Applicant Signature</label>
+            <input type="text" id="signature" name="Applicant Signature"><br>
+
+            <label for="date-signed">Date</label>
+            <input type="date" id="date-signed" name="Date Signed"><br>
+
+            <div class="submit-row">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+<footer>
+    <p>&copy; No Nonsense Animal Rescue</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    emailjs.init({
+        publicKey: "JCDGWkoTNJTEu0EKA"
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("adoption-form");
+
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const values = Object.fromEntries(formData.entries());
+
+            const escapeHtml = (value) =>
+                String(value)
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;");
+
+            const rows = Object.entries(values)
+                .map(([key, value]) => `
+                    <tr>
+                        <td style="padding:6px;border:1px solid #d9d9d9;max-width:220px;white-space:normal;word-break:break-word;">${escapeHtml(key)}</td>
+                        <td style="padding:6px;border:1px solid #d9d9d9;">${escapeHtml(value)}</td>
+                    </tr>
+                `)
+                .join("");
+
+            const templateParams = {
+                message: `
+                    <h2>New Adoption Application Submission</h2>
+                    <table style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;">
+                        <tbody>${rows}</tbody>
+                    </table>
+                `
+            };
+
+            emailjs.send("service_ehbvz1o", "template_nm74ryb", templateParams)
+                .then(function () {
+                    form.reset();
+                    window.location.href = "thank-you.html";
+                })
+                .catch(function (error) {
+                    console.error("EmailJS error:", error);
+                    alert("There was a problem sending your form. Please try again.");
+                });
+        });
+    });
+</script>
+
+<!-- Link to external JavaScript file -->
+<script src="assets/javascript.js"></script>
