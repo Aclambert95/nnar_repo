@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spay / Neuter Assistance | No Nonsense Animal Rescue</title>
+    <link rel="icon" type="image/png" href="assets/images/nnar_logo_icon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <script src="assets/navManager.js"></script>
+</head>
+<body class="main-body">
+    <header>
+        <h1 class="header">No Nonsense Animal Rescue</h1>
+    </header>
+
+    <special-nav></special-nav>
+
+    <form class="adoption-form" id="spay-neuter-form" data-email-subject="New Spay / Neuter Assistance Application">
+        <h2>NNAR Spay / Neuter Assistance Application</h2>
+        <p><b>Assistance is limited to households with total gross annual income of $68,000 or less. Income eligibility does not guarantee assistance; approval is subject to available funding, clinic availability, and program requirements. NNAR may request reasonable documentation to verify eligibility. Do not submit Social Security numbers, bank account numbers, or other unnecessary sensitive information.</b></p>
+
+        <fieldset class="set1">
+            <h2>Applicant Information</h2>
+            <label for="spay-full-name">Full Name</label>
+            <input id="spay-full-name" name="Full Name" autocomplete="name" required>
+            <label for="spay-date">Date</label>
+            <input id="spay-date" name="Date" type="date" required>
+            <label for="spay-phone">Phone</label>
+            <input id="spay-phone" name="Phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-phone-format="true" required>
+            <label for="spay-email">Email</label>
+            <input id="spay-email" name="Email" type="email" autocomplete="email" required>
+            <label for="spay-street">Street Address</label>
+            <input id="spay-street" name="Street Address" autocomplete="street-address" required>
+            <label for="spay-city">City</label>
+            <input id="spay-city" name="City" required>
+            <label for="spay-state-zip">State / ZIP</label>
+            <input id="spay-state-zip" name="State / ZIP" required>
+            <label>County</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="County" value="McMinn" required> McMinn</label>
+                <label class="checkbox-item"><input type="radio" name="County" value="Monroe"> Monroe</label>
+                <label class="checkbox-item"><input type="radio" name="County" value="Other"> Other</label>
+            </div>
+            <label for="spay-other-county">If other, county</label>
+            <input id="spay-other-county" name="Other county">
+            <label>Preferred Contact</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Preferred contact" value="Call" required> Call</label>
+                <label class="checkbox-item"><input type="radio" name="Preferred contact" value="Text"> Text</label>
+                <label class="checkbox-item"><input type="radio" name="Preferred contact" value="Email"> Email</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="set2">
+            <h2>Household &amp; Income Information</h2>
+            <label for="spay-adults">Number of adults in household</label>
+            <input id="spay-adults" name="Number of adults in household" type="number" min="0" required>
+            <label for="spay-dependents">Number of children / dependents</label>
+            <input id="spay-dependents" name="Number of children / dependents" type="number" min="0" required>
+            <label for="spay-household-size">Total household size</label>
+            <input id="spay-household-size" name="Total household size" type="number" min="1" required>
+            <label for="spay-earners">Number of income earners</label>
+            <input id="spay-earners" name="Number of income earners" type="number" min="0" required>
+            <label for="spay-monthly-income">Gross household income per month ($)</label>
+            <input id="spay-monthly-income" name="Gross household income per month" type="number" min="0" step="0.01" required>
+            <label for="spay-yearly-income">Gross household income per year ($)</label>
+            <input id="spay-yearly-income" name="Gross household income per year" type="number" min="0" step="0.01" required>
+            <label>Income sources (select all that apply)</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="checkbox" name="Income sources" value="Employment"> Employment</label>
+                <label class="checkbox-item"><input type="checkbox" name="Income sources" value="Self-employment"> Self-employment</label>
+                <label class="checkbox-item"><input type="checkbox" name="Income sources" value="Social Security / SSI / SSDI"> Social Security / SSI / SSDI</label>
+                <label class="checkbox-item"><input type="checkbox" name="Income sources" value="Retirement / Pension"> Retirement / Pension</label>
+                <label class="checkbox-item"><input type="checkbox" name="Income sources" value="Unemployment"> Unemployment</label>
+                <label class="checkbox-item"><input type="checkbox" name="Income sources" value="Other"> Other</label>
+            </div>
+            <label for="spay-income-other">Other income source</label>
+            <input id="spay-income-other" name="Other income source">
+            <p>If requested, acceptable proof may include a recent pay stub, benefit or award letter, tax document, or other reasonable documentation showing household income.</p>
+            <label for="spay-need">Why is spay/neuter assistance needed?</label>
+            <textarea id="spay-need" name="Why assistance is needed" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset class="set3">
+            <h2>Pet Information</h2>
+            <label for="spay-pet-name">Pet Name</label>
+            <input id="spay-pet-name" name="Pet Name" required>
+            <label>Species</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Species" value="Dog" required> Dog</label>
+                <label class="checkbox-item"><input type="radio" name="Species" value="Cat"> Cat</label>
+            </div>
+            <label>Sex</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Sex" value="Male" required> Male</label>
+                <label class="checkbox-item"><input type="radio" name="Sex" value="Female"> Female</label>
+            </div>
+            <label for="spay-age">Approximate Age / Date of Birth</label>
+            <input id="spay-age" name="Approximate age / date of birth">
+            <label for="spay-breed">Breed / Mix</label>
+            <input id="spay-breed" name="Breed / Mix">
+            <label for="spay-color">Color / Markings</label>
+            <input id="spay-color" name="Color / Markings">
+            <label for="spay-weight">Approximate Weight</label>
+            <input id="spay-weight" name="Approximate weight">
+            <label for="spay-microchip">Microchip Number</label>
+            <input id="spay-microchip" name="Microchip number">
+            <label>Currently pregnant?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Currently pregnant" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Currently pregnant" value="No"> No</label>
+                <label class="checkbox-item"><input type="radio" name="Currently pregnant" value="Unsure"> Unsure</label>
+            </div>
+            <label>Currently nursing?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Currently nursing" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Currently nursing" value="No"> No</label>
+            </div>
+            <label>Recent heat cycle?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Recent heat cycle" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Recent heat cycle" value="No"> No</label>
+                <label class="checkbox-item"><input type="radio" name="Recent heat cycle" value="Unsure"> Unsure</label>
+            </div>
+            <label for="spay-heat-date">If yes, approximate date</label>
+            <input id="spay-heat-date" name="Approximate date of recent heat cycle" type="date">
+            <label for="spay-health">Known medical conditions, medications, allergies, previous surgeries, or other health concerns</label>
+            <textarea id="spay-health" name="Pet health concerns" rows="4"></textarea>
+        </fieldset>
+
+        <fieldset class="set4">
+            <h2>Veterinary Information</h2>
+            <label>Current rabies vaccine?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Current rabies vaccine" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Current rabies vaccine" value="No"> No</label>
+                <label class="checkbox-item"><input type="radio" name="Current rabies vaccine" value="Unsure"> Unsure</label>
+            </div>
+            <label for="spay-rabies-date">Rabies date / expiration</label>
+            <input id="spay-rabies-date" name="Rabies date / expiration">
+            <label>Current core vaccines?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Current core vaccines" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Current core vaccines" value="No"> No</label>
+                <label class="checkbox-item"><input type="radio" name="Current core vaccines" value="Unsure"> Unsure</label>
+            </div>
+            <label for="spay-clinic">Veterinary Clinic</label>
+            <input id="spay-clinic" name="Veterinary clinic">
+            <p>Please provide veterinary and vaccine records if available. Participating clinics may require rabies vaccination or other services at the time of surgery.</p>
+        </fieldset>
+
+        <fieldset class="set5">
+            <h2>Program Acknowledgments</h2>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="checkbox" name="Acknowledgments" value="Income is $68,000 or less" required> I certify that my total gross household income is $68,000 or less per year.</label>
+                <label class="checkbox-item"><input type="checkbox" name="Acknowledgments" value="Over $68,000 is not eligible" required> I understand that households with total gross annual income above $68,000 are not eligible.</label>
+                <label class="checkbox-item"><input type="checkbox" name="Acknowledgments" value="Owner or authorized caretaker" required> I am the owner or authorized caretaker of the pet listed above.</label>
+                <label class="checkbox-item"><input type="checkbox" name="Acknowledgments" value="Funding and approval required" required> I understand that assistance depends on available funding, clinic availability, and NNAR approval.</label>
+                <label class="checkbox-item"><input type="checkbox" name="Acknowledgments" value="Other costs may be my responsibility" required> I understand NNAR may approve only the procedure and specifically authorized services; other costs may be my responsibility.</label>
+                <label class="checkbox-item"><input type="checkbox" name="Acknowledgments" value="Follow clinic instructions" required> I agree to follow clinic instructions and promptly notify NNAR if I cannot attend a scheduled appointment.</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="set6">
+            <h2>Transportation &amp; Scheduling</h2>
+            <label>Reliable transportation to clinic?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Reliable transportation" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Reliable transportation" value="No"> No</label>
+            </div>
+            <label>Need transportation assistance?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Need transportation assistance" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Need transportation assistance" value="No"> No</label>
+            </div>
+            <label>Can you travel outside your county for a lower-cost clinic?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="radio" name="Travel outside county" value="Yes"> Yes</label>
+                <label class="checkbox-item"><input type="radio" name="Travel outside county" value="No"> No</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="set7">
+            <h2>Certification &amp; Authorization</h2>
+            <p>I certify that the information provided in this application, including household income, is true and complete to the best of my knowledge. I understand that inaccurate information may result in denial or cancellation of assistance. NNAR provides financial and/or coordination assistance and is not the veterinary provider. Medical decisions, surgical eligibility, treatment, and discharge instructions are determined by the participating veterinary clinic. I authorize NNAR and the participating clinic to exchange information reasonably necessary to schedule, verify, and document services provided through this program. I remain responsible for my pet's care before and after surgery and for costs not specifically approved by NNAR.</p>
+            <label for="spay-signature">Applicant Signature (type full name)</label>
+            <input id="spay-signature" name="Applicant signature" required>
+            <label for="spay-sign-date">Date</label>
+            <input id="spay-sign-date" name="Signature date" type="date" required>
+            <label for="spay-printed-name">Printed Name</label>
+            <input id="spay-printed-name" name="Printed name" required>
+            <label for="spay-sign-pet">Pet Name</label>
+            <input id="spay-sign-pet" name="Pet name for certification" required>
+        </fieldset>
+
+        <div class="submit-row"><button type="submit" class="submit-btn">Submit</button></div>
+    </form>
+
+    <footer><p>&copy; No Nonsense Animal Rescue</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/formSubmission.js"></script>
+    <script src="assets/javascript.js"></script>
+</body>
+</html>
