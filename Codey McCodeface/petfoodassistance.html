@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Food Assistance | No Nonsense Animal Rescue</title>
+    <link rel="icon" type="image/png" href="assets/images/nnar_logo_icon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <script src="assets/navManager.js"></script>
+</head>
+<body class="main-body">
+    <header>
+        <h1 class="header">No Nonsense Animal Rescue</h1>
+    </header>
+
+    <special-nav></special-nav>
+
+    <form class="adoption-form" id="pet-food-form" data-email-subject="New Pet Food Assistance Form">
+        <h2>NNAR Pet Food Assistance Form</h2>
+        <p><strong>Eligibility:</strong> Total gross household income must be $68,000 or less per year to qualify. Assistance is based on available donated food.</p>
+
+        <fieldset class="set1">
+            <h2>Applicant Information</h2>
+            <label for="food-name">Name</label>
+            <input id="food-name" name="Name" autocomplete="name" required>
+            <label for="food-date">Date</label>
+            <input id="food-date" name="Date" type="date" required>
+            <label for="food-phone">Phone</label>
+            <input id="food-phone" name="Phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-phone-format="true" required>
+            <label for="food-county">County</label>
+            <input id="food-county" name="County" required>
+            <label for="food-address">Address</label>
+            <input id="food-address" name="Address" autocomplete="street-address" required>
+        </fieldset>
+
+        <fieldset class="set2">
+            <h2>Household Income</h2>
+            <label for="food-household-size">Number of people in household</label>
+            <input id="food-household-size" name="Number of people in household" type="number" min="1" required>
+            <label for="food-monthly-income">Gross monthly household income ($)</label>
+            <input id="food-monthly-income" name="Gross monthly household income" type="number" min="0" step="0.01" required>
+            <label for="food-yearly-income">Gross annual household income ($)</label>
+            <input id="food-yearly-income" name="Gross annual household income" type="number" min="0" step="0.01" required>
+            <label class="checkbox-item"><input type="checkbox" name="Income certification" value="I certify household income is $68,000 or less per year" required> I certify that my total gross household income is $68,000 or less per year.</label>
+        </fieldset>
+
+        <fieldset class="set3">
+            <h2>Pets in Household</h2>
+            <label for="food-total-pets">Total number of pets</label>
+            <input id="food-total-pets" name="Total number of pets" type="number" min="0" required>
+            <label for="food-dogs">Dogs</label>
+            <input id="food-dogs" name="Number of dogs" type="number" min="0">
+            <label for="food-cats">Cats</label>
+            <input id="food-cats" name="Number of cats" type="number" min="0">
+            <label for="food-other-pets">Other pets</label>
+            <input id="food-other-pets" name="Number of other pets" type="number" min="0">
+            <label>Food needed for (select all that apply)</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="checkbox" name="Food needed for" value="Dog(s)"> Dog(s)</label>
+                <label class="checkbox-item"><input type="checkbox" name="Food needed for" value="Cat(s)"> Cat(s)</label>
+                <label class="checkbox-item"><input type="checkbox" name="Food needed for" value="Both"> Both</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="set4">
+            <h2>Agreement</h2>
+            <p>I understand that food distributed by No Nonsense Animal Rescue may be donated from warehouses, retailers, manufacturers, rescue partners, or other donation programs. NNAR cannot guarantee the freshness, storage history, brand, formula, packaging condition, or continued availability of donated food. I agree to inspect all food before feeding it to my pet, including checking for mold, insects or bugs, unusual odor, moisture, contamination, damaged packaging, or other signs that the food may be unsafe. I will discard and not feed any food that appears questionable.</p>
+            <p>By accepting donated pet food, I voluntarily assume responsibility for determining whether the food is appropriate and safe for my pet. To the fullest extent permitted by law, I release and hold harmless No Nonsense Animal Rescue, its directors, officers, volunteers, fosters, donors, and partners from claims, liability, illness, injury, loss, or expense arising from the storage, condition, selection, or use of donated pet food, except where liability cannot legally be waived. Food received through this program is for pets in my household and may not be sold or resold.</p>
+            <label class="checkbox-item"><input type="checkbox" name="Agreement" value="Accepted" required> I have read and agree to the terms above.</label>
+            <label for="food-signature">Applicant Signature (type full name)</label>
+            <input id="food-signature" name="Applicant signature" required>
+            <label for="food-sign-date">Date</label>
+            <input id="food-sign-date" name="Signature date" type="date" required>
+        </fieldset>
+
+        <div class="submit-row"><button type="submit" class="submit-btn">Submit</button></div>
+    </form>
+
+    <footer><p>&copy; No Nonsense Animal Rescue</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/formSubmission.js"></script>
+    <script src="assets/javascript.js"></script>
+</body>
+</html>
